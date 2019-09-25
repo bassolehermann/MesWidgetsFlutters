@@ -79,7 +79,7 @@ class _MyAnimatedList extends State<MyAnimatedList>
           title: Text("AnimatedList"),
           actions: <Widget>[
             new GestureDetector(
-              onTap: () => launch(""),
+              onTap: () => launch("https://github.com/bassolehermann/MesWidgetsFlutters/blob/master/lib/AnimatedList.dart"),
               child: Icon(Icons.link),
             )
           ],

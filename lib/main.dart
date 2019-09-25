@@ -4,13 +4,11 @@ import 'list.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final GlobalKey debuger=GlobalKey();
+  final GlobalKey debuger = GlobalKey();
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-
       title: 'Mes Widgets',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -41,7 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
               flex: 1,
               child: Container(
-                child: Text("📲",style: TextStyle(fontSize: 50.0),),
+                child: Text(
+                  "📲",
+                  style: TextStyle(fontSize: 50.0),
+                ),
               ),
             ),
             Expanded(
@@ -50,18 +51,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   itemCount: item.length,
                   itemBuilder: (context, i) {
                     return FlatButton(
-
                       onPressed: () => Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (BuildContext context) => listwidget[i],
                         ),
                       ),
                       child: Text(
-                        item[i],style: TextStyle(fontSize: 20.0,),
+                        item[i],
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
                       ),
                       color: Colors.grey,
                       padding: EdgeInsets.all(5.0),
-
                     );
                   }),
             )
